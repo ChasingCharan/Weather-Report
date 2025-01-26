@@ -1,7 +1,6 @@
 const API_KEY = "0a9627b95ac1044e51275bafdd2c910e";
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
-
 document.addEventListener("DOMContentLoaded", () =>{
     const searchButton = document.getElementById('searchButton');
     const locationButton = document.getElementById('locationButton');
@@ -10,25 +9,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     const currentWeatherLeftDiv = document.getElementById('currentWeather-left');
 
     const forecastContainer = document.getElementById('forecastContainer');
-
-    // Weather condition to icon mapping
-    const weatherIcons = {
-        Clear: { icon: "fas fa-sun", color: "text-yellow-500" },
-        Clouds: { icon: "fas fa-cloud", color: "text-gray-500" },
-        Rain: { icon: "fas fa-cloud-showers-heavy", color: "text-blue-500" },
-        Drizzle: { icon: "fas fa-cloud-rain", color: "text-blue-400" },
-        Thunderstorm: { icon: "fas fa-bolt", color: "text-yellow-600" },
-        Snow: { icon: "fas fa-snowflake", color: "text-blue-300" },
-        Mist: { icon: "fas fa-smog", color: "text-gray-400" },
-        Fog: { icon: "fas fa-smog", color: "text-gray-400" },
-        Smoke: { icon: "fas fa-smog", color: "text-gray-500" },
-        Haze: { icon: "fas fa-smog", color: "text-gray-400" },
-        Dust: { icon: "fas fa-wind", color: "text-yellow-600" },
-        Sand: { icon: "fas fa-wind", color: "text-yellow-700" },
-        Ash: { icon: "fas fa-volcano", color: "text-gray-600" },
-        Squall: { icon: "fas fa-wind", color: "text-blue-500" },
-        Tornado: { icon: "fas fa-wind", color: "text-red-500" },
-    };
 
     // Fetch current weather data for a city
     async function fetchWeather(city) {
@@ -72,10 +52,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 <p class="text-lg capitalize mt-1">${weatherDescription}</p>
             </div>
         `;
-
-
     }
-
 
     // Update 5-day forecast data
     function updateForecast(data) {
@@ -144,6 +121,4 @@ document.addEventListener("DOMContentLoaded", () =>{
             }
         });
     });
-
-
 });
