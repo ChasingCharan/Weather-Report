@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                 const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
                 return `
-                    <li class="bg-gray-400 text-white rounded-lg p-7 text-center shadow">
+                    <li class="bg-gray-400 text-white rounded-lg p-3 text-center shadow">
                         <h3 class="text-lg font-bold">${date}</h3>
                         <img src="${iconUrl}" alt="Weather Icon" class="w-12 h-12 mx-auto my-2">
                         <p>Temp: ${forecast.main.temp}°C</p>
